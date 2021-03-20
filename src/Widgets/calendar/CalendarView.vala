@@ -185,6 +185,7 @@ public class DateTime.Widgets.CalendarView : Gtk.Grid {
         selected_date = today;
         if (start.equal (start_month)) {
             position -= rel_postion;
+            start_month_grid.update_today();
             carousel.switch_child (position, carousel.get_animation_duration ());
         } else {
             /*reset Carousel if center_child != the grid of the month of today*/
